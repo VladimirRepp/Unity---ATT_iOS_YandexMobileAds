@@ -66,7 +66,7 @@ void RequestATTFromUnity() {
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground)
         
         // Проверка флага PlayerPrefs (AutoATTRequest)
-        //if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AutoATTRequest"])
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AutoATTRequest"])
         
         if (@available(iOS 14, *)) {
             [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
@@ -76,7 +76,7 @@ void RequestATTFromUnity() {
         } else {
             UnitySendMessage("ATTManager", "OnTrackingAuthorizationComplete", "-1");
         }
-//}
+}
 return YES;
 
     [self initUnityWithApplication: application];
