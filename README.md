@@ -22,11 +22,13 @@
    - Для работы требует подключения `Plugins/iOS/AppTrackingTransparencyHelper.mm`, который передает статус ATT через external-метод `Scripts/Adv/ATT iOS/ATTManager.cs`.  
    - Запрос ATT выполняется в `Awake()` через `RequestTrackingAuthorization`, ответ обрабатывается в `OnTrackingAuthorizationComplete` для настройки Yandex Mobile Ads.  
 
-Рекомендуемый вариант: **Сценарий 3**, как наиболее гибкий и надежный. Сценарии 1 и 2 находятся в тестовой стадии.
+Рекомендуемый вариант: 
 ===
+**Сценарий 3**, как наиболее гибкий и надежный. Сценарии 1 и 2 находятся в тестовой стадии.
 
-Unity packages - on check
+Unity packages 
 ===
+**Status - on check**
 В данном пакете собраны все представленые решения (код + префабы)
 
 UnityAppController.mm (Xcode)
